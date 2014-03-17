@@ -1,0 +1,41 @@
+<!doctype html> 
+<html lang=en>
+<head>
+<style id=base-embedded>
+#video_player{display:table;line-height:0;background:#000;font-size:0;}
+#video_player video,
+#video_player figcaption{display:table-cell;vertical-align:top;}
+#video_player figcaption{width:25%;}
+#video_player figcaption a{display:block;opacity:.5;transition:1s opacity;}
+#video_player figcaption a img,figure video{width:100%;height:auto;}
+#video_player figcaption a:hover{opacity:1;}
+@media screen and (max-width: 700px) {
+  #video_player video,#video_player figcaption {
+    display:table-row;
+  }
+  #video_player figcaption a{
+    display:inline-block;width:33.33%;
+  }
+}
+body{
+  text-align: center;
+  font-family: arial;
+}
+.button{
+  margin:20px;
+  font-size:16px;
+  font-weight: bold;
+  padding:5px 10px;
+}
+</style>
+<title>playlists</title> 
+</head>
+<body lang=en>
+<h1>playlists</h1>
+<input type="button" value="playlist #1" class="button" />
+<figure id="video_player"></figure>
+<p>a playlist based on <a href="http://g.mamund.com/uber">uber</a> messaging | open playlist as <a href="/playlists/" target="_blank">JSON</a></p>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="playlists.js" type="text/javascript"></script>
+</body>
+</html>
