@@ -67,7 +67,6 @@ function handler(req, res) {
     else {
       url = req.url;
     }
-    console.log("receiving url "+ url);
 
     // handle CORS OPTIONS call
     if(req.method==='OPTIONS') {
@@ -159,7 +158,6 @@ function handler(req, res) {
 
     msg = makeUber(g.list,false);
     res.writeHead(200, 'OK', m.uberJson);
-    console.log("sending json "+ g.list.length);
     res.end(msg);
   }
 
